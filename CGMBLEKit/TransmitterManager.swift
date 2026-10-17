@@ -152,7 +152,11 @@ public class TransmitterManager: TransmitterDelegate {
     public var rawState: CGMManager.RawStateValue {
         return state.rawValue
     }
-    
+
+    public var sensorIdentifier: String? {
+        return state.transmitterID
+    }
+
     func logDeviceCommunication(_ message: String, type: DeviceLogEntryType = .send) {
     }
 
